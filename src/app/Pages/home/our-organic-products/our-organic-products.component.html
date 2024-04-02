@@ -1,0 +1,124 @@
+<div class="container-fluid fruite py-5">
+    <div class="container py-5">
+      <div class="tab-class text-center">
+        <div class="row g-4">
+          <!-- Input field for search -->
+          <div class="col-lg-12 mb-3">
+            <input type="text" class="form-control borderOrange w-25" placeholder="Search products" [(ngModel)]="searchQuery" (keyup.enter)="onSearch()">
+          </div>
+          
+          <div *ngIf="errorMessage; else productsList" class="text-danger">{{ errorMessage }}</div>
+          
+          <ng-template #productsList>
+            <div *ngIf="searchResults.length === 0" class="text-info">No products found.</div>
+            <div *ngFor="let product of searchResults" class="product-item container d-flex">
+                <div class="card">
+                  <img [src]="product.thumbnail" class="product-image" alt="Product Image">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ product.title }}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+                    <p class="card-text">Price: {{ product.price | currency }}</p>
+                  </div>
+                </div>
+              </div>
+              
+          </ng-template>
+          
+          
+          <!-- Buttons for different categories -->
+          <div class="col-lg-4 text-start">
+            <h1>Our Products</h1>
+          </div>
+          <div class="col-lg-8 text-end">
+            <button class="btn rounded-pill borderOrange mx-2">Men's Clothing</button>
+            <button class="btn rounded-pill borderOrange mx-2">Electronics</button>
+            <button class="btn rounded-pill borderOrange mx-2">Women's Clothing</button>
+            <button class="btn rounded-pill borderOrange mx-2">Jewelry</button>
+          </div>
+        </div>
+        <div class="tab-content">
+          <!-- Display filtered products -->
+          <div id="tab-1" class="tab-pane fade show p-0 active">
+            <div class="row g-4">
+              <div class="col-lg-12">
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-4 col-xl-3" *ngFor="let product of products">
+                    <!-- Product card HTML -->
+                    <div class="fruite-item borderOrange">
+                      <div class="position-relative">
+                        <div class="fruite-img">
+                          <img src="{{ product.thumbnail }}" class="img-fluid rounded-top product-image" alt="">
+                        </div>
+                        <div class="text-white bgOrange px-3 py-1 rounded position-absolute top-0 start-0">{{ product.category }}</div>
+                      </div>
+                      <div class="mt-3"><p class="text-dark fs-5 fw-bold mb-0">{{ product.title }}</p> </div>
+                      <div class="p-4 border-secondary border-top-0 rounded-bottom">
+                        <h4 class="textOrange">{{ product.description.slice(0,50)  }}</h4>
+                        <div class="d-flex justify-content-between flex-lg-wrap mt-2">
+                          <p class="text-dark fs-5 fw-bold mb-0">{{ product.price | currency }}</p>
+                          <a href="#" class="p-2 fw-bold btn-cart borderOrange rounded-pill px-3 textSuccess"><i class="fa fa-shopping-bag me-2 textSuccess"></i> Add to cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+
+
+   <!-- Featurs Start -->
+   <div class="container-fluid service py-5">
+    <div class="container py-5">
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <a href="#">
+                    <div class="service-item bg-secondary rounded border border-secondary">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.Ym4SYm8UXan6ev2T_q1-yQHaF7&pid=Api&P=0&h=220" class="img-fluid rounded-top w-100" alt="">
+                        <div class="px-4 rounded-bottom">
+                            <div class="service-content bg-primary text-center p-4 rounded">
+                                <h5 class="text-white">Fresh Apples</h5>
+                                <h3 class="mb-0">20% OFF</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="#">
+                    <div class="service-item bg-dark rounded border border-dark">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.5VEP2xfBEwSXgTxb8tU8EwHaEK&pid=Api&P=0&h=220" class="img-fluid rounded-top w-100" alt="">
+                        <div class="px-4 rounded-bottom">
+                            <div class="service-content bg-light text-center p-4 rounded">
+                                <h5 class="text-primary">Tasty Fruits</h5>
+                                <h3 class="mb-0">Free delivery</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="#">
+                    <div class="service-item bg-primary rounded border border-primary">
+                        <img src="https://images5.alphacoders.com/408/408046.jpg" class="img-fluid rounded-top w-100" alt="">
+                        <div class="px-4 rounded-bottom">
+                            <div class="service-content bg-secondary text-center p-4 rounded">
+                                <h5 class="text-white">Exotic Vegitable</h5>
+                                <h3 class="mb-0">Discount 30$</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Featurs End -->
