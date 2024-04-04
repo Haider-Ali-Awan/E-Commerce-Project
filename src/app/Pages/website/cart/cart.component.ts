@@ -9,12 +9,24 @@ import { AllService } from 'src/app/all.service';
 })
 export class CartComponent implements OnInit{
 
-  cartData: any[] = [];
+  cartData: any; // Variable to store cart data
 
-  constructor(private apiService: AllService) { }
+  constructor(private cartService: AllService) { }
 
   ngOnInit(): void {
-   
+    this.getCart();
   }
 
+  // Method to fetch cart data
+  getCart(): void {
+    this.cartService.getCartData().subscribe(
+      (data) => {
+        this.cartData = data;
+        console.log(this.cartData); // For testing purpose
+      },
+      (error) => {
+        console.error('Error fetching cart data:', error);
+      }
+    );
+  }
 }

@@ -27,6 +27,7 @@ import { FeaturesComponent } from './Pages/home/features/features.component';
 import { OurOrganicProductsComponent } from './Pages/home/our-organic-products/our-organic-products.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { VegitableShopComponent } from './Pages/home/vegitable-shop/vegitable-shop.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FeaturesComponent,
     OurOrganicProductsComponent,
     HomeComponent,
+    VegitableShopComponent,
   ],
   imports: [
     BrowserModule,

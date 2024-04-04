@@ -1,0 +1,9 @@
+.btn:not(.active) {
+    background-color: rgb(234, 232, 232) !important; /* Transparent grey */
+}
+
+
+.btn:not(.active).bgOrange {
+    background-color: #FFB524 !important;
+    color: white !important;
+}

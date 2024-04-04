@@ -9,6 +9,7 @@ export class AllService {
 
   productsUrl = 'https://dummyjson.com/products';
   private apiUrl = 'https://dummyjson.com/products/search?q='; // Define API URL here
+  private UserCart = "https://dummyjson.com/carts/user/15"
 
 
 
@@ -24,7 +25,10 @@ export class AllService {
     return this.http.get<any>(`${this.apiUrl}${query}`);
   }
   
-
+  // Method to fetch cart data
+  getCartData(): Observable<any> {
+    return this.http.get<any>(this.UserCart);
+  }
  
   
 

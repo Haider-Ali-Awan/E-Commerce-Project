@@ -11,6 +11,27 @@ h1, h2, h3, h5, h6 {
     font-family: "Raleway', sans-serif" !important;
 }
 
+
+.textColorGreen{
+    
+    color: #81C408 !important;
+}
+
+.bgGreen{
+
+background-color: #81C408 !important;
+}
+
+.bgGreyDark{
+
+    background-color: #45595b !important;
+}
+
+.greyDarkText{
+
+    color: #45595b !important;
+}
+
 /* 
 .btn-cart{
 
@@ -179,6 +200,12 @@ p   {
     transition: 0.5s;
 }
 
+
+.img-fluid{
+
+    height: 414px !important;
+}
+
 .borderOrange{
     
     border: 1px solid #FFB524 !important;
@@ -188,6 +215,8 @@ p   {
 
     background-color: #FFB524 !important;
 }
+
+
 
 
 .featurs-item {
@@ -385,7 +414,7 @@ a{
   
   .product-image {
     /* display: block; */
-    object-fit: cover !important;
+    object-fit:cover !important
   }
   
   .textOrange {
