@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -56,7 +57,8 @@ import { VegitableShopComponent } from './Pages/home/vegitable-shop/vegitable-sh
     BrowserModule,
     AppRoutingModule,
     FormsModule ,// Add FormsModule here
-    HttpClientModule, BrowserAnimationsModule
+    HttpClientModule, BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

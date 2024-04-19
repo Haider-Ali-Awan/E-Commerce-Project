@@ -1,22 +1,40 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthServiceService } from 'src/app/auth-service.service';
+import { FormBuilder, FormGroup , Validators } from '@angular/forms';
+import { AllService } from 'src/app/all.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
 
-  constructor(private authService: AuthServiceService) { }
+  loginForm! : FormGroup;
 
-  login(): void {
+  constructor(private fb : FormBuilder ,private serviceLogin : AllService, private router : Router ,private authService: AuthServiceService) { 
+    
+  }
+
+
+  ngOnInit(): void {
+    this.loginForm = this.fb.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required]
+    });
+  }
+
+
+  onSubmit() {
     const username = "kminchelle";
     const password = "0lelplR";
     this.authService.login(username, password).subscribe(
       (response) => {
         console.log("Login successful:", response);
         this.authService.saveToken(response.token); // Save token to localStorage
-        // Redirect user or perform other actions
+        
+        // Redirect user to the /home route
+        this.router.navigate(['/home']);
       },
       (error) => {
         console.error("Login error:", error);
@@ -24,7 +42,6 @@ export class LoginComponent {
       }
     );
   }
-
 
   logout(): void {
     localStorage.removeItem('authToken');
