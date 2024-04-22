@@ -7,15 +7,15 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  showHeroBanner: boolean = false;
+  // showHeroBanner: boolean = false;
 
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        this.showHeroBanner = (event.url === '/home');
-      }
-    });
+  
+  }
+
+  isHomeRoute(): boolean {
+    return this.router.url === '/home';
   }
 }

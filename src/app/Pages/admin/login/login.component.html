@@ -1,5 +1,5 @@
-<div class="parent">
-    <div class="container">
+<div class="parent p-5">
+    <div class="container mt-5">
         <div class="left-section"></div>
         <div class="right-section">
             <div class="login-container">
@@ -25,10 +25,13 @@
                         <i class="fab fa-twitter social-icon"></i>
                     </div>
                     <button type="submit">Login</button>
-                    <button class="mt-2" (click)="logout()" type="button">LogOut</button>
+                    <button *ngIf="isLoggedIn()" class="mt-2" (click)="logout()" type="button">LogOut</button>
                     
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+
+

@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <app-modal-search></app-modal-search>
-<div *ngIf="showHeroBanner">
-    <app-hero></app-hero>
+<div>
+    <app-hero *ngIf="isHomeRoute()"></app-hero>
   </div>
 <router-outlet></router-outlet>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AuthServiceService } from 'src/app/auth-service.service';
 import { FormBuilder, FormGroup , Validators } from '@angular/forms';
 import { AllService } from 'src/app/all.service';
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit{
         this.authService.saveToken(response.token); // Save token to localStorage
         
         // Redirect user to the /home route
-        this.router.navigate(['/home']);
+        this.router.navigate(['/cart']);
       },
       (error) => {
         console.error("Login error:", error);
@@ -45,6 +45,14 @@ export class LoginComponent implements OnInit{
 
   logout(): void {
     localStorage.removeItem('authToken');
+     
+        // Redirect user to the /home route
+        this.router.navigate(['/cart']);
+  }
+
+
+  @Input() isLoggedIn(): boolean {
+    return this.authService.isLoggedIn(); // Check if user is logged in
   }
   
   

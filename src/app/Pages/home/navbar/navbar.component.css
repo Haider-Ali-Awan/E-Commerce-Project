@@ -1,0 +1,7 @@
+.user-dropdown .dropdown-menu {
+    display: none;
+}
+
+.user-dropdown:hover .dropdown-menu {
+    display: block;
+}

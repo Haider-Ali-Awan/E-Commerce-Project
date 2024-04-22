@@ -29,6 +29,7 @@ import { OurOrganicProductsComponent } from './Pages/home/our-organic-products/o
 import { HomeComponent } from './Pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VegitableShopComponent } from './Pages/home/vegitable-shop/vegitable-shop.component';
+import { ViewCartComponent } from './view-cart/view-cart.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { VegitableShopComponent } from './Pages/home/vegitable-shop/vegitable-sh
     OurOrganicProductsComponent,
     HomeComponent,
     VegitableShopComponent,
+    ViewCartComponent,
   ],
   imports: [
     BrowserModule,
