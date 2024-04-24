@@ -7,20 +7,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CartComponent } from './Pages/website/cart/cart.component';
-import { CategoriesComponent } from './Pages/admin/categories/categories.component';
-import { CustomerComponent } from './Pages/admin/customer/customer.component';
-import { LayoutComponent } from './Pages/admin/layout/layout.component';
+import { CartComponent } from './Pages/admin/cart/cart.component';
 import { LoginComponent } from './Pages/admin/login/login.component';
-import { OrderComponent } from './Pages/admin/order/order.component';
 import { ProductsComponent } from './Pages/admin/products/products.component';
 import { LandingComponent } from './Pages/home/landing/landing.component';
-import { CategoryProductsComponent } from './Pages/website/category-products/category-products.component';
-import { CustomerCartComponent } from './Pages/website/customer-cart/customer-cart.component';
-import { CheckOutComponent } from './Pages/website/check-out/check-out.component';
-import { CustomerOrdersComponent } from './Pages/website/customer-orders/customer-orders.component';
+import { CheckOutComponent } from './Pages/admin/check-out/check-out.component';
 import { NavbarComponent } from './Pages/home/navbar/navbar.component';
 import { ModalSearchComponent } from './Pages/home/modal-search/modal-search.component';
 import { HeroComponent } from './Pages/home/hero/hero.component';
@@ -29,23 +23,22 @@ import { OurOrganicProductsComponent } from './Pages/home/our-organic-products/o
 import { HomeComponent } from './Pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VegitableShopComponent } from './Pages/home/vegitable-shop/vegitable-shop.component';
-import { ViewCartComponent } from './view-cart/view-cart.component';
+import { ViewCartComponent } from './Pages/admin/view-cart/view-cart.component';
+import { ProfileUserComponent } from './Pages/admin/profile-user/profile-user.component';
+import { ShopComponent } from './Pages/admin/shop/shop.component';
+import { ShopDeteilsComponent } from './Pages/admin/shop-deteils/shop-deteils.component';
+import { ContactUsComponent } from './Pages/admin/contact-us/contact-us.component';
+import { DummyApiComponent } from './Pages/admin/dummy-api-messgae/dummy-api.component';
+import { FooterComponent } from './Pages/admin/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CartComponent,
-    CategoriesComponent,
-    CustomerComponent,
-    LayoutComponent,
     LoginComponent,
-    OrderComponent,
     ProductsComponent,
     LandingComponent,
-    CategoryProductsComponent,
-    CustomerCartComponent,
     CheckOutComponent,
-    CustomerOrdersComponent,
     NavbarComponent,
     ModalSearchComponent,
     HeroComponent,
@@ -54,6 +47,12 @@ import { ViewCartComponent } from './view-cart/view-cart.component';
     HomeComponent,
     VegitableShopComponent,
     ViewCartComponent,
+    ProfileUserComponent,
+    ShopComponent,
+    ShopDeteilsComponent,
+    ContactUsComponent,
+    DummyApiComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

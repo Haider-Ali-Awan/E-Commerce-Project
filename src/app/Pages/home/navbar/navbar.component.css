@@ -2,6 +2,117 @@
     display: none;
 }
 
-.user-dropdown:hover .dropdown-menu {
+.user-dropdown .dropdown-toggle:hover + .dropdown-menu,
+.user-dropdown .dropdown-menu:hover {
     display: block;
 }
+
+.user-dropdown .dropdown-menu {
+    transition: display 0.5s ease-in-out; /* Add a transition for smoother appearance/disappearance */
+}
+
+
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #FFB524;
+}
+
+
+.dropdown-toggle::after {
+    color: #FFB524; /* Change this to your desired color */
+}
+
+
+
+
+.dropdown-menu {
+    position: absolute;
+    top: 65%;
+    /* Adjust left or right positioning as needed */
+    right: 0;
+    /* Add any other necessary styles */
+}
+
+
+
+
+
+
+
+
+ @media (max-width: 1200px) {
+    .hide  {
+        display: none !important;
+    }
+}
+
+
+
+@media (min-width: 1200px) {
+    .profile-and-logout-hide {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+.dropdown-menu-end
+{
+        display: none !important;
+    }
+}
+
+
+
+
+@media (min-width: 1200px) {
+    .small-screen-navbar-items
+    {
+            display: none !important;
+        }
+    }
+    
+
+    @media (max-width: 1200px) {
+    .large-screen-navbar-items
+    
+        {
+                display: none !important;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+        .custom-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .custom-dropdown-toggle {
+            color: #000000A6;
+            background-color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        
+        .custom-dropdown-menu {
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 0;
+            z-index: 1000;
+            display: none;
+        }
+        
+        
+        .custom-dropdown-menu.show {
+            display: block;
+        }
+        

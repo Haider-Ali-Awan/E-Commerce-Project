@@ -733,3 +733,23 @@ a{
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+.fruite-name{
+
+    color: #81C408;
+}
+
+
+.custom-range::-webkit-slider-thumb {
+    background-color: #81C408; /* Change this color to your desired color */
+}
+
+.custom-range::-moz-range-thumb {
+    background-color: #81C408; /* Change this color to your desired color */
+}
+
+.custom-range::-ms-thumb {
+    background-color: #81C408; /* Change this color to your desired color */
+}

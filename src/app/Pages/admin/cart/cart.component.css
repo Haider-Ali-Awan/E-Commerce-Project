@@ -1,0 +1,14 @@
+@media (max-width: 767px) {
+    .big-screen-cart {
+      display: none;
+    }
+  }
+  
+
+
+  @media (min-width: 769px) {
+    .small-screen-cart {
+      display: none;
+    }
+  }
+  
