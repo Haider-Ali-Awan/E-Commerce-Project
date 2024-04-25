@@ -12,6 +12,12 @@ export class NavbarComponent {
 
   constructor(private authService: AuthServiceService,  private router : Router) {}
 
+
+   // Function to check if the current route is active
+   isActive(route: string): boolean {
+    return this.router.url === route;
+  }
+
   // Function to check if user is logged in
   isLoggedIn(): boolean {
     return this.authService.isLoggedIn(); // Check if user is logged in

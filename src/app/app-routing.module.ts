@@ -11,6 +11,8 @@ import { ShopComponent } from './Pages/admin/shop/shop.component';
 import { ShopDeteilsComponent } from './Pages/admin/shop-deteils/shop-deteils.component';
 import { ContactUsComponent } from './Pages/admin/contact-us/contact-us.component';
 import { DummyApiComponent } from './Pages/admin/dummy-api-messgae/dummy-api.component';
+import { TestimonialComponent } from './Pages/admin/testimonial/testimonial.component';
+import { DummyAddToCartMessageComponent } from './Pages/admin/dummy-add-to-cart-message/dummy-add-to-cart-message.component';
 
 const routes: Routes = [
 
@@ -65,6 +67,21 @@ const routes: Routes = [
     path: "cart",
     component:CartComponent,
   },
+
+
+  
+  {
+    path: "dummyAddToCart",
+    component:DummyAddToCartMessageComponent,
+  },
+
+  
+
+  {
+    path: "testimonial",
+    component:TestimonialComponent,
+  },
+
 
   
 

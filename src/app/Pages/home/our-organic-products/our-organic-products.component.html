@@ -5,11 +5,11 @@
     <div class="tab-class text-center">
       <div class="row g-4">
         <!-- Input field for search -->
-        <div class="col-lg-3 text-end">
-          <input type="text" class="form-control mb-3" placeholder="Search products..." [(ngModel)]="searchTerm" (input)="searchProducts()">
+        <div class="col-lg-4 col-md-12 col-sm-12 text-end">
+          <input style="border: 1px solid #FFB524;" type="text" class="form-control mb-3" placeholder="Search products..." [(ngModel)]="searchTerm" (input)="searchProducts()">
         </div>
         
-         <div class="col-lg-9 text-start">
+         <div class="col-lg-12 text-start">
           <h1>Our Products</h1>
         </div>
         <!-- Buttons for different categories -->
@@ -53,7 +53,7 @@
                       <h4 class="textOrange">{{ product.description.slice(0,50)  }}</h4>
                       <div class="d-flex justify-content-between flex-lg-wrap mt-2">
                         <p class="text-dark fs-5 fw-bold mb-0">{{ product.price | currency }}</p>
-                        <a href="#" class="p-2 fw-bold btn-cart borderOrange rounded-pill px-3 textSuccess"><i class="fa fa-shopping-bag me-2 textSuccess"></i> Add to cart</a>
+                        <a routerLink = "/dummyAddToCart" href="#" class="p-2 fw-bold btn-cart borderOrange rounded-pill px-3 textSuccess"><i class="fa fa-shopping-bag me-2 textSuccess"></i> Add to cart</a>
                       </div>
                     </div>
                   </div>

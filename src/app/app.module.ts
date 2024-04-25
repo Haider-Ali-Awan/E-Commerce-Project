@@ -30,6 +30,8 @@ import { ShopDeteilsComponent } from './Pages/admin/shop-deteils/shop-deteils.co
 import { ContactUsComponent } from './Pages/admin/contact-us/contact-us.component';
 import { DummyApiComponent } from './Pages/admin/dummy-api-messgae/dummy-api.component';
 import { FooterComponent } from './Pages/admin/footer/footer.component';
+import { TestimonialComponent } from './Pages/admin/testimonial/testimonial.component';
+import { DummyAddToCartMessageComponent } from './Pages/admin/dummy-add-to-cart-message/dummy-add-to-cart-message.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,8 @@ import { FooterComponent } from './Pages/admin/footer/footer.component';
     ContactUsComponent,
     DummyApiComponent,
     FooterComponent,
+    TestimonialComponent,
+    DummyAddToCartMessageComponent,
   ],
   imports: [
     BrowserModule,

@@ -21,76 +21,88 @@
     <div class="container px-0">
         <nav class="navbar navbar-light bg-white navbar-expand-xl">
             <a href="index.html" class="navbar-brand">
-                <h1 class=" display-6">Fruitables</h1>
+                <h1 class=" display-6">Gold Mart</h1>
             </a>
             <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars "></span>
             </button>
             <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+
+               <!-- Navbar For small screen Start -->
                 <div class="navbar-nav mx-auto small-screen-navbar-items">
-                    <a routerLink = "/home" href="index.html" class="nav-item nav-link active">Home</a>
+                    <a routerLink = "/home" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation" href="index.html" class="nav-item nav-link"[ngClass]="{'active-link': isActive('/home')}">Home</a>
+
+
                     <a data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                    aria-label="Toggle navigation" routerLink = "/shop" href="shop.html" class="nav-item nav-link">Shop</a>
+                    aria-label="Toggle navigation" routerLink = "/shop" href="shop.html" class="nav-item nav-link" [ngClass]="{'active-link': isActive('/shop')}">Shop</a>
                     <a data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                    aria-label="Toggle navigation" routerLink = "/shopDetails" href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
+                    aria-label="Toggle navigation" routerLink = "/shopDetails" href="shop-detail.html" class="nav-item nav-link"[ngClass]="{'active-link': isActive('/shopDetails')}">Shop Detail</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0 bg-secondary rounded-0">
                             <a routerLink = "/cart" data-bs-toggle="collapse"
                             data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                            aria-label="Toggle navigation" href="cart.html" class="dropdown-item">Cart</a>
+                            aria-label="Toggle navigation" href="cart.html" class="dropdown-item" [ngClass]="{'active-link': isActive('/cart')}">Cart</a>
                             <a routerLink = "/checkOut" data-bs-toggle="collapse"
                             data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                            aria-label="Toggle navigation" href="chackout.html" class="dropdown-item">Chackout</a>
-                            <a href="#" class="dropdown-item">Testimonial</a>
+                            aria-label="Toggle navigation" href="chackout.html" class="dropdown-item"[ngClass]="{'active-link': isActive('/checkOut')}">Chackout</a>
+                            <a  routerLink = "/testimonial" data-bs-toggle="collapse"
+                            data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                            aria-label="Toggle navigation"   href="#" class="dropdown-item"[ngClass]="{'active-link': isActive('/testimonial')}">Testimonial</a>
                             <a href="#" class="dropdown-item">404 Page</a>
                         </div>
                     </div>
                     <a data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                    aria-label="Toggle navigation" routerLink = "/contactUs" href="contact.html" class="nav-item nav-link">Contact</a>
+                    aria-label="Toggle navigation" routerLink = "/contactUs" href="contact.html" class="nav-item nav-link"[ngClass]="{'active-link': isActive('/contactUs')}">Contact</a>
                    
                     <div *ngIf="isLoggedIn()" class="profile-and-logout-hide">
                         <a data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                        aria-label="Toggle navigation" routerLink = "/profile" href="#" class="nav-item nav-link">Profile</a>
+                        aria-label="Toggle navigation" routerLink = "/profile" href="#" class="nav-item nav-link"[ngClass]="{'active-link': isActive('/profile')}">Profile</a>
                         <a  class="nav-item nav-link" href="#" (click)="logout()">Logout</a>
     
                     </div>
 
 
                 </div>
+                <!-- Navbar For Small screen End -->
 
 
+
+
+                <!-- Navbar For Large Screen Start  -->
                 <div class="navbar-nav mx-auto large-screen-navbar-items">
-                    <a routerLink = "/home" href="index.html" class="nav-item nav-link active">Home</a>
-                    <a routerLink = "/shop" href="shop.html" class="nav-item nav-link">Shop</a>
-                    <a routerLink = "/shopDetails" href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
+                    <a routerLink="/home" href="index.html" class="nav-item nav-link" [ngClass]="{'active-link': isActive('/home')}">Home</a>
+                    <a routerLink="/shop" href="shop.html" class="nav-item nav-link" [ngClass]="{'active-link': isActive('/shop')}">Shop</a>
+                    <a routerLink="/shopDetails" href="shop-detail.html" class="nav-item nav-link" [ngClass]="{'active-link': isActive('/shopDetails')}">Shop Detail</a>
                     <div class="nav-item dropdown">
                         <div class="dropdown custom-dropdown">
                             <button class="dropdown-toggle custom-dropdown-toggle" type="button" id="dropdownMenuButton" aria-expanded="false">
                                 Pages
                             </button>
                             <div class="dropdown-menu custom-dropdown-menu bg-secondary rounded-0" aria-labelledby="dropdownMenuButton">
-                                <a routerLink="/cart" href="cart.html" class="dropdown-item">Cart</a>
-                                <a routerLink="/checkOut" href="checkOut.html" class="dropdown-item">Checkout</a>
-                                <a href="#" class="dropdown-item">Testimonial</a>
+                                <a routerLink="/cart" href="cart.html" class="dropdown-item" [ngClass]="{'active-link': isActive('/cart')}">Cart</a>
+                                <a routerLink="/checkOut" href="checkOut.html" class="dropdown-item" [ngClass]="{'active-link': isActive('/checkOut')}">Checkout</a>
+                                <a routerLink="/testimonial" href="#" class="dropdown-item" [ngClass]="{'active-link': isActive('/testimonial')}">Testimonial</a>
                                 <a href="#" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
-                        
                     </div>
-                    <a routerLink = "/contactUs" href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a routerLink="/contactUs" href="contact.html" class="nav-item nav-link" [ngClass]="{'active-link': isActive('/contactUs')}">Contact</a>
                     
                     <div *ngIf="isLoggedIn()" class="profile-and-logout-hide">
-                        <a routerLink="/profile" href="#" class="nav-item nav-link">Profile</a>
+                        <a routerLink="/profile" href="#" class="nav-item nav-link" [ngClass]="{'active-link': isActive('/profile')}">Profile</a>
                         <a class="nav-item nav-link" href="#" (click)="logout()">Logout</a>
                     </div>
                 </div>
                 
+                <!-- Navbar For Large Screen End -->
 
                
 
