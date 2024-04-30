@@ -8,17 +8,10 @@ import { AllService } from 'src/app/all.service';
 })
 export class OurOrganicProductsComponent implements OnInit  {
 
-  products: any[] = []; // Initialize products as an empty array
-  // searchQuery: string = ''; // Property to store search query
-  // searchResults: any[] = []; // Property to store search results
-  // errorMessage: string = ''; // Property to store error message
+  products: any[] = []; // define the products array
   filteredProducts: any[] = []; // Define the filteredProducts array
   searchTerm: string = ''; // Define the searchTerm variable
   activeCategory: string = 'All'; // Track the active category, initialized to 'All'
-
-
-
-
 
 
   constructor(private productService: AllService) { }
@@ -40,30 +33,7 @@ export class OurOrganicProductsComponent implements OnInit  {
     );
   }
 
-  
 
-  // onSearch() {
-  //   this.searchProducts(this.searchQuery); // Call searchProducts with the current search query
-  // }
-
-  // searchProducts(query: string) {
-  //   this.productService.searchProducts(query).subscribe(
-  //     (response) => {
-  //       if (response.products.length === 0) {
-  //         this.errorMessage = 'No products found.'; // Display error message if no products found
-  //       } else {
-  //         this.searchResults = response.products; // Store the search results
-  //         console.log(this.searchResults); // Logging the response for demonstration
-  //         this.errorMessage = ''; // Clear error message if products found
-  //         // Handle response as needed
-  //       }
-  //     },
-  //     (error) => {
-  //       console.error('Error fetching search results:', error);
-  //       this.errorMessage = 'Error fetching search results. Please try again later.'; // Display error message
-  //     }
-  //   );
-  // }
 
   filterProductsByCategory(category: string): void {
     this.activeCategory = category; // Update the active category
@@ -87,6 +57,5 @@ export class OurOrganicProductsComponent implements OnInit  {
 
 
 
-  // Search function to filter products based on search term
 
 
