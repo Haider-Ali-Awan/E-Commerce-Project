@@ -23,7 +23,7 @@
                         <i class="fab fa-facebook-f social-icon"></i>
                         <i class="fab fa-twitter social-icon"></i>
                     </div>
-                    <button type="submit">Login</button>
+                    <button [disabled]="loginForm.invalid" type="submit">Login</button>
                     <button *ngIf="isLoggedIn()" class="mt-2" (click)="logout()" type="button">LogOut</button>
                     
                 </form>

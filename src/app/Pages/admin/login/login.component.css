@@ -27,6 +27,14 @@ body {
     max-width: 450px;
 }
 
+
+button:disabled {
+    opacity: 0.5; /* Reduce the opacity of the disabled button */
+    cursor: not-allowed; /* Change cursor to not-allowed */
+    /* Optionally, you can add more styling */
+  }
+  
+
 .login-form h2 {
     color: #ffb144;
     text-align: center;

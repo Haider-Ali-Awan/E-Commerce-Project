@@ -22,7 +22,6 @@ import { FeaturesComponent } from './Pages/home/features/features.component';
 import { OurOrganicProductsComponent } from './Pages/home/our-organic-products/our-organic-products.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { VegitableShopComponent } from './Pages/home/vegitable-shop/vegitable-shop.component';
 import { ViewCartComponent } from './Pages/admin/view-cart/view-cart.component';
 import { ProfileUserComponent } from './Pages/admin/profile-user/profile-user.component';
 import { ShopComponent } from './Pages/admin/shop/shop.component';
@@ -47,7 +46,6 @@ import { DummyAddToCartMessageComponent } from './Pages/admin/dummy-add-to-cart-
     FeaturesComponent,
     OurOrganicProductsComponent,
     HomeComponent,
-    VegitableShopComponent,
     ViewCartComponent,
     ProfileUserComponent,
     ShopComponent,

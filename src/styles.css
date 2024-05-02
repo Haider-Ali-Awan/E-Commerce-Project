@@ -217,6 +217,10 @@ p   {
 }
 
 
+.text-Orange{
+
+    color: #81C408 !important;
+}
 
 
 .featurs-item {
@@ -738,7 +742,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .fruite-name{
 
-    color: #81C408;
+    color: grey;
 }
 
 
