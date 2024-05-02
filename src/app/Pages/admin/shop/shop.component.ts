@@ -24,7 +24,7 @@ export class ShopComponent implements OnInit  {
       (data: any) => {
         if (data && Array.isArray(data.products)) {
           this.products = data.products;
-          this.filteredProducts = this.products; // Initialize filteredProducts with all products
+          this.filteredProducts = this.products.reverse(); // Initialize filteredProducts with all products
           console.log(this.products);
         } else {
           console.error('Error: Expected an array of products but received:', data);
@@ -51,6 +51,8 @@ export class ShopComponent implements OnInit  {
   }
 
   searchProducts(): void {
+    
+    this.currentPage = 1; // Reset current page to 1
     this.filteredProducts = this.products.filter(product =>
       product.title.toLowerCase().includes(this.searchTerm.toLowerCase()) || 
       product.category.toLowerCase().includes(this.searchTerm.toLowerCase())
