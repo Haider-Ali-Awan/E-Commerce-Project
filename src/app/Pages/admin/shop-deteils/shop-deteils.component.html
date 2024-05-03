@@ -165,40 +165,43 @@
                     </div>
                     <form action="#">
                         <h4 class="mb-5 fw-bold">Leave a Reply</h4>
-                        <div class="row g-4">
-                            <div class="col-lg-6">
+                        <form [formGroup]="commentForm" (ngSubmit)="submitForm()">
+                            <div class="row g-4">
+                              <div class="col-lg-6">
                                 <div class="border-bottom rounded">
-                                    <input type="text" class="form-control border-1 me-4" placeholder="Yur Name *">
+                                  <input type="text" class="form-control border-1 me-4" placeholder="Your Name *" formControlName="name">
                                 </div>
-                            </div>
-                            <div class="col-lg-6">
+                              </div>
+                              <div class="col-lg-6">
                                 <div class="border-bottom rounded">
-                                    <input type="email" class="form-control border-1" placeholder="Your Email *">
+                                  <input type="email" class="form-control border-1" placeholder="Your Email *" formControlName="email">
                                 </div>
-                            </div>
-                            <div class="col-lg-12">
+                              </div>
+                              <div class="col-lg-12">
                                 <div class="border-bottom rounded my-4">
-                                    <textarea name="" id="" class="form-control border-1" cols="30" rows="8" placeholder="Your Review *" spellcheck="false"></textarea>
+                                  <textarea class="form-control border-1" cols="30" rows="8" placeholder="Your Review *" spellcheck="false" formControlName="review"></textarea>
                                 </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="d-flex justify-content-between py-3 mb-5">
-                                    <div class="d-flex align-items-center">
-                                        <p class="mb-0 me-3">Please rate:</p>
-                                        <div class="d-flex align-items-center" style="font-size: 12px;">
-                                            <i class="fa fa-star text-muted"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
+                              </div>
+                              <div class="col-lg-12">
+                                <div class="d-flex justify-content-between flex-wrap py-3 mb-5">
+                                  <div class="d-flex align-items-center">
+                                    <p class="mb-0 me-3">Please rate:</p>
+                                    <div class="d-flex align-items-center" style="font-size: 12px;">
+                                      <i class="fa fa-star text-muted"></i>
+                                      <i class="fa fa-star"></i>
+                                      <i class="fa fa-star"></i>
+                                      <i class="fa fa-star"></i>
+                                      <i class="fa fa-star"></i>
                                     </div>
-                                    <div class="d-flex justify-content-center  text-center">
-                                        <a href="#" routerLink = "/shop" class="text-decoration-none border border-secondary px-4 py-3 bg-secondary text-white rounded-pill text-primary w-100">Post Comment</a>
-                                    </div>
+                                  </div>
+                                  <div class="d-flex justify-content-center text-center">
+                                    <button type="submit" class="text-decoration-none border border-secondary px-4 py-3 bg-secondary text-white rounded-pill text-primary w-100 post-comment">Post Comment</button>
+                                  </div>
                                 </div>
+                              </div>
                             </div>
-                        </div>
+                          </form>
+                          
                     </form>
                 </div>
             </div>

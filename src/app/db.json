@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "name": "John",
+      "email": "ha@gmail.com",
+      "review": "good products"
+    },
+    {
+      "id": "4b6a",
+      "name": "Haider Ali",
+      "email": "hello@gmail.com",
+      "review": "best Experience"
+    },
+    {
+      "id": "32fd",
+      "name": "aa",
+      "email": "babu@gmail.com",
+      "review": "good"
+    }
+  ]
+}
